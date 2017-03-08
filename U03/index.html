@@ -5,7 +5,7 @@
     <title>National News</title>
 
 
-    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 
     <script>
         // IE Fix
@@ -121,7 +121,9 @@
             </footer>
         </article>
         <article>
-            <h3>Handyweitwurf EM in Steinhausen</h3>
+            <header>
+                <h3>Handyweitwurf EM in Steinhausen</h3>
+            </header>
                 <p>Die Sieger der Handyweitwurf EM in Steinhausen stehen fest.</p>
             <ol start="3" reversed>
                 <li>Mark Haudegen</li>
@@ -145,7 +147,9 @@
     <section>
         <h2>International</h2>
             <article>
-                <h3>Nachbarländer der Schweiz</h3>
+                <header>
+                    <h3>Nachbarländer der Schweiz</h3>
+                </header>
                 <p>Klicken Sie auf ein Land in der interaktiven Karte, um den Wikipediaartikel über das Land aufzurufen</p>
                 <object data="media/countries.svg" type="image/svg+xml"></object>
                 <footer>
@@ -154,7 +158,9 @@
                 </footer>
             </article>
         <article>
-            <h3>Russische Lautsprecherdurchsage</h3>
+            <header>
+                <h3>Russische Lautsprecherdurchsage</h3>
+            </header>
             <figure>
                 <video controls width="640" height="480" role="application" poster="media/640px-Metro_SPB_Line5_Zvenigorodskaya_main.jpg">
                     <source src="media/Metro_SPB_announcement.mp3" type="audio/mp3">
@@ -178,8 +184,9 @@
     <section>
         <h2>Wissen</h2>
         <article>
-            <h3>Abkürzungen des Tages</h3>
-
+            <header>
+                h3>Abkürzungen des Tages</h3>
+            </header>
                 <dt>LiFi</dt>
                     <dd>Eine neue Technologie, basiernend auf Licht, die WiFI in geschlossene Räumen
                         ablösen könnte.</dd>
@@ -193,7 +200,9 @@
             </footer>
         </article>
             <article>
-                <h3>Blutkreislauf</h3>
+                <header>
+                    <h3>Blutkreislauf</h3>
+                </header>
                 <p>So funktioniert unser Blutkreislauf. Das Herz pumpt von den Lungen mit suaerstoffangereichertes Blut in den Körper und Sauerstoff armes Blut zurück in die Lunge.
                 Klappen sorgen dafür, das das Blut nur in eine Richtung fliessen kann.</p>
                 <img src="media/Circulatory_system_SMIL.svg" width="500" height="500">
@@ -252,9 +261,92 @@
 </main>
 
 <aside>
-    <!-- TODO LOGIN FORM -->
+    <h2>Login</h2>
+    <form name="login">
+        <label>Benutzername
+            <input type="text">
+        </label>
+        <label>Passwort
+            <input type="password">
+        </label>
+        <Button>Einloggen</Button>
+    </form>
 
-    <!-- TODO ARTIKEL FORM-->
+    <h2>Artikel einreichen</h2>
+    <form name="new-article">
+        <fieldset>
+            <legend>Autor</legend>
+            <label>Herr
+                <input type="radio" checked="true">
+            </label>
+            <label>Frau
+                <input type="radio">
+            </label>
+            <label>Name
+                <input type="text" required>
+            </label>
+            <label>Nachname
+                <input type="text" required>
+            </label>
+            <label>Telefon
+                <input type="tel" required>
+            </label>
+            <label>E-Mail
+                <input type="email" required>
+            </label>
+            <label>Website
+                <input type="url">
+            </label>
+            <label>Geburtsdatum
+                <input type="date" required>
+            </label>
+            <label>Nationalität
+                <select>
+                    <option value="Switzerland"></option>
+                    <option value="England"></option>
+                    <option value="France"></option>
+                    <option value="Spain"></option>
+                </select></label>
+        </fieldset>
+            <legend>Beitrag</legend>
+            <label>Titel
+                <input type="text">
+            </label>
+            <select mutiple>Kategorie
+                <option value="National"></option>
+                <option value="International"></option>
+                <option value="Digital"></option>
+                <option value="Wissen"></option>
+                <option value="Diverses"></option>
+            </select>
+            <label>Aktualität
+                <input type="range" min="-2" max="2" value="0">
+            </label>
+            <label>Bilder
+                <button>Choose Files</button>No Files selected</label>
+            <label>Text
+                <input type="text" height="80">
+            </label>
+        <fieldset>
+            <legend>Rechtliches</legend>
+                <label>
+                    <input type="checkbox" required>
+                    Ich bestätige, das ich der Urheber des Textes bin
+                </label>
+            <label>
+                <input type="checkbox" required>
+                Ich bestätige, das ich der Urheber aller eingereichter Bilder bin
+            </label>
+            <label>
+                <input type="checkbox" required>
+                Ich bestätige, das der Text nach bestem Treu und glauben der Wahrheit
+                entspricht und die Bilder nicht manipuliert wurden
+            </label>
+        </fieldset>
+        <footer>
+            <small><button>Einreichen</button><button>Abbrechen</button></small>
+        </footer>
+    </form>
 </aside>
 
 <footer>
